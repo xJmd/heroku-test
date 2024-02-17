@@ -1,8 +1,9 @@
 import spacy
 import spacy.cli
 
-nlp = spacy.load("en_core_web_sm")
 spacy.cli.download("en_core_web_sm")
+nlp = spacy.load("en_core_web_sm")
+
 
 class Formater():
     def __init__(self, transcript):
