@@ -3,3 +3,4 @@ spacy
 flask
 bs4
 requests
+gunicorn
