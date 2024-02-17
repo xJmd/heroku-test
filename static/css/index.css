@@ -1,3 +1,4 @@
+/* Common styles for all screen sizes */
 body {
   font-family: "Poppins", sans-serif;
   display: flex;
@@ -7,6 +8,7 @@ body {
   margin: 0;
   background-color: #010B13 !important;
 }
+
 .container {
   background-color: #333333;
   padding: 30px 30px !important;
@@ -14,9 +16,11 @@ body {
   box-shadow: 0 0 20px #333333;
   color: #e4f7ef !important;
 }
+
 .input-group {
   margin-bottom: 10px;
 }
+
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -26,17 +30,24 @@ body {
   transition: background-color 0.3s;
   background-color: #0C8054 !important;
 }
+
 .btn:hover {
-    background-color: #59bb95 !important;
-    color: #000000 !important;
+  background-color: #59bb95 !important;
+  color: #000000 !important;
 }
 
-#basic-addon4{
+#basic-addon4 {
   color: white !important;
 }
 
-.form-control:focus{
+.form-control:focus {
   border-color: #0C8054 !important;
-  box-shadow: 0 0 10px 0px #0C8054 !important
-  
+  box-shadow: 0 0 10px 0px #0C8054 !important;
+}
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 600px) {
+  .input-group-text {
+    display: none !important; 
+  }
 }

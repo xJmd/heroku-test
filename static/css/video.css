@@ -112,3 +112,18 @@ body{
 .green-btn:hover {
     background-color: #59bb95; /* Darker shade of blue on hover */
 }
+
+
+@media only screen and (max-width: 600px) {
+    .popup-content {
+        width: 90%; /* Adjusted width for mobile */
+        height: auto; /* Auto height for mobile */
+        margin: 50px auto; /* Adjusted margin for mobile */
+    }
+
+    .thumbnail img {
+        width: 100%; /* Set the width to 80% of its container for example */
+        max-width: 300px; /* Limit the width to a maximum of 300 pixels */
+        height: auto;
+    }   
+}

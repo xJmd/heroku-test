@@ -16,14 +16,19 @@ def index():
     
     return render_template('index.html')
 
-
 @app.route('/video')
 def video():
     id = request.args.get('id')
     if 'youtube.com' in id:
         url = id
+    elif 'youtu.be' in id:
+        url = "https://www.youtube.com/watch?v=" + id.split('/')[-1]
+        print(url)
     else:
         url = "https://www.youtube.com/watch?v=" + id
+
+
+
     
     scraper = thumbnail.Scraper(url)
     try:
