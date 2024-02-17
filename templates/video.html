@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT-Scraper</title>
+    <link rel="stylesheet" href="static\css\video.css">
+</head>
+<body>
+<div class="container">
+    <div class="thumbnail">
+        <img src="{{ thumbnail }}" alt="Thumbnail", onclick="redirectToYT()">
+    </div>
+    <div class="details">
+        <h1 class="title">{{ title }}</h1>
+        <h2 class="date">{{ date }}</h2>
+        <div class="buttons-row">
+            <button class="green-btn" onclick="thumb()">Thumbnail</button>
+            <button class="green-btn" onclick="getTranscript()">Generate Transcript</button>
+        </div>
+    </div>
+</div>
+<div class="popup" id="donatePopup">
+    <div class="popup-content">
+        <span class="close" onclick="hideDonatePopup()">&times;</span>
+        <h2>Donate to support the young <b>13</b> year old developer behind this app</h2>
+        <p>Your support is greatly appreciated.</p>
+        <div class="buttons">
+            <button class="donate-now-btn" onclick="donate()">Donate Now</button>
+            <button class="no-thanks-btn" onclick="hideDonatePopup()">No Thanks</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function redirectToYT() {
+        window.open("{{ url }}", "_blank");
+    }
+
+    function showDonatePopup() {
+        document.getElementById("donatePopup").style.display = "block";
+    }
+
+    function hideDonatePopup() {
+        document.getElementById("donatePopup").style.display = "none";
+    }
+
+    function donate() {
+        window.open("https://paypal.me/jimmydin7", "_blank");
+    }
+
+    function getTranscript(){
+        window.open("/transcript?url=" + "{{ url }}", "_blank")
+    }
+
+    function thumb(){
+        window.open("{{ thumbnail }}", "_blank")
+    }
+    // Show donation popup when the page loads
+    window.onload = function() {
+        showDonatePopup();
+    };
+</script>
+</body>
+</html>

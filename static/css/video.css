@@ -1,0 +1,114 @@
+body{
+
+    font-family: "Poppins", sans-serif;
+    background-color: #010B13;
+
+}
+
+.container {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.thumbnail {
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.thumbnail img {
+    width: 800px; /* Adjust size as needed */
+    border-radius: 30px;
+}
+
+.details {
+    text-align: center;
+}
+
+.title {
+    font-size: 25px; /* Adjust size as needed */
+    margin: 0;
+    color: white;
+}
+
+.date {
+    font-size: 15px; /* Adjust size as needed */
+    color: #888;
+    margin: 20;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #fff;
+    width: 500px;
+    height: 300px; /* Increased height */
+    margin: 150px auto; /* Adjusted margin */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column; /* Changed to column layout */
+    justify-content: space-between; /* Align items to the bottom */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the end */
+}
+
+.donate-now-btn {
+    background-color: blue; /* Changed button color to blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.no-thanks-btn {
+    background-color: white; /* Changed button color to white */
+    color: blue; /* Changed text color to blue */
+    padding: 10px 20px;
+    border: 2px solid blue; /* Added border */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.green-btn {
+    background-color: #0C8054; /* Blue color */
+    color: white; /* White text color */
+    cursor: pointer; /* Cursor on hover */
+    padding: 10px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    outline: none; /* No outline */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.green-btn:hover {
+    background-color: #59bb95; /* Darker shade of blue on hover */
+}

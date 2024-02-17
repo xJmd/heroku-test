@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transcript</title>
+<style>
+    body {
+        font-family: Poppins, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #010B13;
+    }
+    .transcript {
+        background-color: #2d3135;
+        border: 1px solid #0e0e0e;
+        padding: 20px;
+        border-radius: 5px;
+        color: white;
+    }
+    p {
+        margin: 0;
+    }
+    .button {
+        padding: 10px 20px;
+        background-color: #0C8054;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-right: 10px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: background-color 0.3s;    
+    }
+
+    .button:hover{
+        background-color: #59bb95;
+    }
+</style>
+</head>
+<body>
+<div>
+    <a href="/" class="button">Back to Home</a>
+    <a class="button" onclick="copy()">Copy to Clipboard</a>
+</div>
+<div class="transcript">
+    {{ t }}
+
+</div>
+
+<script>
+    function copy() {
+
+        var copyText = document.getElementsByClassName('transcript')[0];
+        var textToCopy = copyText.innerText;
+
+        navigator.clipboard.writeText(textToCopy);
+
+}
+</script>
+
+</body>
+</html>
