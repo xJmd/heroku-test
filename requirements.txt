@@ -3,4 +3,3 @@ spacy
 flask
 bs4
 requests
-spacy.cli
